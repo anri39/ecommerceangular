@@ -15,7 +15,7 @@ import { Cart } from '../../../services/cart';
       <div class="flex flex-col items-center justify-between h-full p-6">
         <img [src]="product().image" class="w-[200px] h-[100px] object-contain" />
         <div class="text-center">
-          <span class="block text-md font-bold text-wrap break-words leading-tight">
+          <span class="block text-md font-bold text-wrap break-words leading-tight ">
             {{ product().title }}
           </span>
           <span class="block text-md font-bold">{{ '$' + product().price }}</span>

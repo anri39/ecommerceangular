@@ -16,7 +16,7 @@ import { ProductCard } from './product-card/product-card';
 })
 export class ProductsList {
   async ngOnInit() {
-    const res = await fetch('https://fakestoreapi.com/products');
+    const res = await fetch('https://fakestoreapi.com/products'); // free api
     const data = await res.json();
     this.products.set(data);
   }
