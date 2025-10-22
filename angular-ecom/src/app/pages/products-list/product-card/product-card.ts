@@ -8,13 +8,8 @@ import { Cart } from '../../../services/cart';
   imports: [PrimaryButton],
   template: `
     <div class="bg-white shadow-md border rounded-xl relative h-[320px]">
-      <span
-        class="absolute top-2 right-3 text-xl font-bold"
-        [class]="product().stock ? 'text-green-500' : 'text-red-500'"
-      >
-        @if (product().stock) {
-        {{ product().stock + ' left' }}
-        } @else { Out of Stock }
+      <span class="absolute top-2 right-3 text-xl font-bold text-green-500">
+        {{ randomNumber }} left
       </span>
 
       <div class="flex flex-col items-center justify-between h-full p-6">
@@ -36,6 +31,7 @@ import { Cart } from '../../../services/cart';
   styles: ``,
 })
 export class ProductCard {
+  randomNumber = Math.floor(Math.random() * 10) + 1;
   product = input.required<Product>();
   cartService = inject(Cart);
 }
